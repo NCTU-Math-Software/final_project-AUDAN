@@ -14,3 +14,10 @@ for n=13890192:-1:10101010
    end
 end
 disp(m)
+%k=floor(log10(a))+1
+%for ii=1:k
+   %t(ii)=fix(n/10^(ii-1))-fix(n/10^ii);
+%end
+%a1=fix(t(k)^2/10);
+%a2=t(k)^2-a1*10;
+%s(2k)=a2   

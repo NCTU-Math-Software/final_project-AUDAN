@@ -14,10 +14,27 @@ for n=13890192:-1:10101010
    end
 end
 disp(m)
-%k=floor(log10(a))+1
-%for ii=1:k
-   %t(ii)=fix(n/10^(ii-1))-fix(n/10^ii);
-%end
-%a1=fix(t(k)^2/10);
-%a2=t(k)^2-a1*10;
-%s(2k)=a2   
+%1389019170 1929374254627488900
+format long;
+m=0;
+%{for n=1389019200:-1:1010101010
+    k=floor(log10(n))+1;
+    t=[];
+    s=[];
+    r=[];
+    for ii=1:k
+        t(k-ii+1)=fix(n/10^(ii-1))-fix(n/10^ii)*10;
+    end
+    for p=1:k
+        L=floor(log10(t(p)*n))+1;
+        for ii=1:L
+            s(p,L-ii+1)=fix(t(p)*n/10^(ii-1))-fix(t(p)*n/10^ii)*10;
+        end
+    end
+    
+    for jj= 1:2*k-1
+       r(jj)=s(1,1);
+    end
+end
+disp(m)
+}%

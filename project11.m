@@ -36,5 +36,4 @@ m=0;
        r(jj)=s(1,1);
     end
 end
-disp(m)
-%}
+disp(m)%}

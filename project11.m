@@ -14,13 +14,13 @@ for n=13890192:-1:10101010
    end
 end
 disp(m)
-%1389019170 1929374254627488900
+%{1389019170 1929374254627488900
 format long;
 m=0;
-%{for n=1389019200:-1:1010101010
+for n=1389019200:-1:1010101010
     k=floor(log10(n))+1;
     t=[];
-    s=[];
+    s=zeros(k,k+1);
     r=[];
     for ii=1:k
         t(k-ii+1)=fix(n/10^(ii-1))-fix(n/10^ii)*10;
@@ -28,12 +28,22 @@ m=0;
     for p=1:k
         L=floor(log10(t(p)*n))+1;
         for ii=1:L
-            s(p,L-ii+1)=fix(t(p)*n/10^(ii-1))-fix(t(p)*n/10^ii)*10;
+            s(p,k-ii+2)=fix(t(p)*n/10^(ii-1))-fix(t(p)*n/10^ii)*10;
         end
     end
     
-    for jj= 1:2*k-1
-       r(jj)=s(1,1);
+    r1=0;
+    for q=2*k-1:-1:1
+        c=0;
+        for a=k:-1:1            
+            for b=k+1:-1:1
+                while a+b==q
+                      c=c+s(a,b); 
+                end
+            end            
+        end
+        r1=fix(c/10);
+        r(q)=c-r1*10;
     end
 end
 disp(m)%}

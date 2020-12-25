@@ -36,8 +36,8 @@ for n=1389019200:-1:1010101010
         c=0;
         for a=k:-1:1            
             for b=k+1:-1:1
-                while a+b==q
-                      c=c+s(a,b); 
+                if a+b==q+2
+                   c=c+s(a,b); 
                 end
             end            
         end

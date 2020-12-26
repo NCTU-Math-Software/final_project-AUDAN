@@ -30,8 +30,8 @@ format long;
 for n=1389019200:-1:1010101010
     Lenth1=floor(log10(n))+1;
     t=[];  % 單位向量化 n
-    s=zeros(Lenth1,2*Lenth1); 
-    r=zeros(1,2*Lenth1-1);
+    s=zeros(Lenth1,2*Lenth1); % 每個單位向量乘 n 並排好位數的矩陣
+    r=zeros(1,2*Lenth1); % 對於 s 的各列加總並進位的結果 (即為 n^2 )
     
     % 對 n 單位向量化
     for ii=1:Lenth1

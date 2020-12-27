@@ -55,7 +55,7 @@ for n=1389019200:-1:1010101010
     r1=0;
     for q=2*Lenth1:-1:1
         c=0; % q 列加總值
-        for a=1:Lentht1        
+        for a=1:Lenth1        
             c=c+s(a,q);                       
         end
         r1=fix(c/10); % 進位值

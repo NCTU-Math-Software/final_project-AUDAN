@@ -1,5 +1,6 @@
-# project_11_平方數_by_AUDAN
-final_project-AUDAN created by GitHub Classroom
+# Project_11_平方數
+
+# Author : AUDAN
 
 I want to write project 11.
 
